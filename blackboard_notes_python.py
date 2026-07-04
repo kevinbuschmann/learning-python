@@ -39,6 +39,17 @@ example_int = 2         # integer -> whole number
 string_double = "x"
 string_single = 'x'
 
+# PUTTING A VARIABLE INSIDE A STRING — two ways:
+num_pizzas = 7
+
+# Way 1 — f-string (easiest). Put f before the quotes, {variable} in the text:
+print(f"We sell {num_pizzas} kinds")     # We sell 7 kinds
+
+# Way 2 — concatenation with + . You MUST turn the number into text with str():
+print("We sell " + str(num_pizzas) + " kinds")   # ✅ text + text
+# print("We sell " + num_pizzas)                 # ❌ CRASH: can't add text + number
+# str(7) becomes "7", so now it's all text and + can glue them together.
+
 
 # ==========================================================
 # 2. BOOLEANS & COMPARISONS
@@ -176,6 +187,10 @@ students.append(["Ellie", 100])   # (["name", score]) -> new row at the end
 #   range(2, 8)     -> 2,3,4,5,6,7
 #   range(5, 15, 3) -> 5, 8, 11, 14   (start 5, before 15, jump by 3)
 
+# ==========================================================
+# 8.  gg
+# ==========================================================
+
 
 # ==========================================================
 # 8. THE MENTAL CHECKLIST  (signal words -> tool)
@@ -210,6 +225,14 @@ Q: .pop() vs .remove() — what's the difference?
    .remove(value) -> delete by VALUE (the thing itself). e.g. .remove("banana")
    .pop(index)    -> delete by POSITION, and hands the item back. e.g. .pop(2)
    Rule: know the value -> remove. know the position -> pop.
+
+Q: How does empty .pop() remove the LAST item?
+   .pop() with NOTHING inside the () defaults to "just grab the last one."
+   These all remove the last item:
+       my_list.pop()     # no number = last item
+       my_list.pop(-1)   # -1 = last item
+   And to remove the 5th element, it's .pop(4)  (5th element = index 4,
+   because counting starts at 0).
 
 Q: Does .remove() delete ALL matching items?
    NO. It only deletes the FIRST match. Removing every match needs a loop
