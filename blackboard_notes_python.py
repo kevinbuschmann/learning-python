@@ -78,6 +78,32 @@ print(not X == Y)        # True   (flips False -> True)
 
 
 # ==========================================================
+# 2b. ASSIGNMENT OPERATORS  —  update a variable
+# ==========================================================
+
+# WATCH OUT: one =  vs  two ==   (the classic mix-up)
+#   =   ASSIGNMENT -> "make this variable equal to..."  (CHANGES it)
+#   ==  COMPARISON -> "IS this equal to...?"            (asks, True/False)
+
+# Assignment operators DO something to a variable (they update it).
+score = 10        # plain assignment: put 10 in score
+
+score += 5        # add    -> score = score + 5   -> 15
+score -= 2        # minus  -> score = score - 2   -> 13
+score *= 2        # times  -> score = score * 2   -> 26
+score /= 2        # divide -> score = score / 2   -> 13.0
+
+# += also works on strings and lists:
+name = "Kev"
+name += "in"      # "Kevin"   (glues text on)
+
+# WHEN TO USE:
+#   Use these when building up a value step by step — especially inside
+#   loops (running totals, counters, moving a robot forward each step).
+#   total += 5  is just a shorter way to write  total = total + 5
+
+
+# ==========================================================
 # 3. LISTS — BASICS
 # ==========================================================
 
@@ -230,9 +256,11 @@ print(paired)   # [('Jenny', 90), ('Alexus', 85), ('Sam', 83)]
 # 8. Loops
 # ==========================================================
 
-# A loop is a way to repeat something multiple times.
-#   for loop  -> repeat a set number of times (or for each item in a list)
-#   while loop -> repeat as long as a condition is true  
+#  A loop is a way to repeat something multiple times.
+#  for loop  -> repeat a set number of times (or for each item in a list)
+#  while loop -> repeat as long as a condition is true  
+#  a for loop in range is a common pattern for "repeat a set number of times"
+3
 
 
 
