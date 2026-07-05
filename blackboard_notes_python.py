@@ -174,6 +174,45 @@ students.append(["Ellie", 100])   # (["name", score]) -> new row at the end
 
 
 # ==========================================================
+# 6b. TUPLES  —  like a list, but LOCKED
+# ==========================================================
+
+# A tuple is an ordered group of items, written with ROUND brackets ( ).
+# The big difference from a list: a tuple CANNOT be changed after you make it
+# (no append, no pop, no reassigning). Use it for values that shouldn't change.
+point = (10, 20)          # e.g. an x, y coordinate
+rgb = (255, 0, 100)       # a fixed color
+
+# You ACCESS items the same way as a list (index with [ ]):
+print(point[0])           # 10
+print(point[1])           # 20
+
+# But you CANNOT change them:
+# point[0] = 5            # ❌ CRASH — tuples are locked (immutable)
+
+# Quick way to remember:
+#   list  = []  -> can change (append, pop, edit)
+#   tuple = ()  -> locked, can't change
+
+
+# ==========================================================
+# 6c. zip()  —  pair up two lists
+# ==========================================================
+
+# zip() takes two (or more) lists and matches them item-by-item into pairs.
+names  = ["Jenny", "Alexus", "Sam"]
+scores = [90, 85, 83]
+
+# Like range(), zip() is lazy — wrap it in list() to actually see the pairs:
+paired = list(zip(names, scores))
+print(paired)   # [('Jenny', 90), ('Alexus', 85), ('Sam', 83)]
+# (each pair comes out as a TUPLE — see section 6b)
+
+# Handy for building a 2D list from two separate lists:
+#   name[0] pairs with score[0], name[1] with score[1], and so on.
+
+
+# ==========================================================
 # 7. range()  —  a number generator
 # ==========================================================
 
@@ -188,8 +227,31 @@ students.append(["Ellie", 100])   # (["name", score]) -> new row at the end
 #   range(5, 15, 3) -> 5, 8, 11, 14   (start 5, before 15, jump by 3)
 
 # ==========================================================
-# 8.  gg
+# 8. Loops
 # ==========================================================
+
+# A loop is a way to repeat something multiple times.
+#   for loop  -> repeat a set number of times (or for each item in a list)
+#   while loop -> repeat as long as a condition is true  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # ==========================================================
