@@ -253,14 +253,67 @@ print(paired)   # [('Jenny', 90), ('Alexus', 85), ('Sam', 83)]
 #   range(5, 15, 3) -> 5, 8, 11, 14   (start 5, before 15, jump by 3)
 
 # ==========================================================
-# 8. Loops
+# 8. LOOPS  —  repeat something over and over
 # ==========================================================
 
 #  A loop is a way to repeat something multiple times.
-#  for loop  -> repeat a set number of times (or for each item in a list)
-#  while loop -> repeat as long as a condition is true  
-#  a for loop in range is a common pattern for "repeat a set number of times"
-3
+#  for loop   -> repeat a set number of times (or for each item in a list)
+#  while loop -> repeat AS LONG AS a condition is true
+#  a for loop with range is the common "repeat a set number of times" pattern
+
+
+# --- WHILE LOOP -------------------------------------------
+# "Keep doing this AS LONG AS the question is True."
+# Every while loop needs 3 things:
+#   1. a START value   2. a QUESTION   3. a CHANGE each time (so it can stop)
+countdown = 3
+while countdown >= 0:      # QUESTION: still 0 or bigger?
+    print(countdown)       # do this...
+    countdown -= 1         # CHANGE (must move toward stopping!) -> 3,2,1,0
+# stops when countdown hits -1 (question becomes False)
+
+
+# --- WHILE LOOP OVER A LIST -------------------------------
+# Walk through a list using an index that climbs each time.
+fruits = ["apple", "banana", "cherry"]
+i = 0
+while i < len(fruits):     # stop once i reaches the length
+    print(fruits[i])
+    i += 1                 # move to the next index
+
+
+# --- INFINITE LOOP (the trap) -----------------------------
+# If nothing inside ever makes the question False, it runs FOREVER.
+# x = 5
+# while x > 0:
+#     print(x)             # x never changes -> prints 5 forever (frozen!)
+# FIX: always change something inside the loop (x -= 1).
+
+
+# --- break  -> QUIT the loop early ------------------------
+for number in [1, 2, 3, 4, 5]:
+    if number == 3:
+        break              # stop the whole loop right now
+    print(number)          # prints 1, 2  (never reaches 3)
+
+
+# --- continue -> SKIP this one, keep looping --------------
+for number in [1, 2, 3, 4, 5]:
+    if number == 3:
+        continue           # skip just 3, go to the next
+    print(number)          # prints 1, 2, 4, 5
+
+
+# --- NESTED LOOP  -> a loop inside a loop ------------------
+# The inner loop runs fully for EACH step of the outer loop.
+for row in [1, 2]:
+    for col in ["a", "b"]:
+        print(row, col)    # 1 a, 1 b, 2 a, 2 b
+
+
+# break vs continue (easy to mix up):
+#   break    = "I'm done, LEAVE the loop"
+#   continue = "SKIP the rest of this turn, go to the next one"
 
 
 
