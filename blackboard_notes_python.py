@@ -316,8 +316,42 @@ for row in [1, 2]:
 #   continue = "SKIP the rest of this turn, go to the next one"
 
 
+# --- THE  total += i  PATTERN  (the one I always forget!) -------
+# GOAL: add up all the numbers in a list.
+prices = [30, 25, 40]
+total = 0                 # 1. start a total at 0 (BEFORE the loop)
+for i in prices:          # 2. i = each number, one at a time (30, then 25, then 40)
+    total += i            # 3. add THAT number onto the total
+print(total)              # 95
+
+# WHY  += i  and not  += 1 ?
+#   i  = the actual number the loop is on right now (30, 25, 40)
+#   += i  -> add the real value   -> SUMS the list      (30+25+40 = 95)
+#   += 1  -> add 1 every time     -> just COUNTS items  (1+1+1 = 3)
+#
+# Say it out loud each time: "total, add the current number i."
+# Remember the 3 pieces:  total = 0  (start) -> total += i (add) -> print (show)
 
 
+# ==========================================================
+# 8. FUNCTIONS  —  a mini-machine you build once, reuse many times
+# ==========================================================
+
+# A function = give it stuff IN, it does a job, it hands stuff BACK OUT.
+def add(a, b):
+    return a + b
+
+print(add(3, 5))     # 8
+
+# def add(a, b):    -> "make a machine called add, that takes 2 things (a, b)"
+# return a + b      -> "the job: add them, hand back the answer"
+# add(3, 5)         -> "run the machine on these two numbers"
+
+# WHY: instead of copy-pasting the same code everywhere, write it ONCE,
+# then just CALL it whenever you need it:
+print(add(10, 2))    # 12
+print(add(100, 1))   # 101
+# same 3-line machine, reused 3 times
 
 
 
@@ -358,6 +392,27 @@ THE 3 QUESTIONS to ask on EVERY problem:
 PRO HABIT - shrink the problem:
   Get ONE case working first, then repeat the same shape.
 """
+
+
+# ==========================================================
+# 8b. FUNCTIONS  —  a mini-machine you build once, reuse many times
+# ==========================================================
+
+# A function = give it stuff IN, it does a job, it hands stuff BACK OUT.
+def add(a, b):
+    return a + b
+
+print(add(3, 5))     # 8
+
+# def add(a, b):    -> "make a machine called add, that takes 2 things (a, b)"
+# return a + b      -> "the job: add them, hand back the answer"
+# add(3, 5)         -> "run the machine on these two numbers"
+
+# WHY: instead of copy-pasting the same code everywhere, write it ONCE,
+# then just CALL it whenever you need it:
+print(add(10, 2))    # 12
+print(add(100, 1))   # 101
+# same 3-line machine, reused 3 times
 
 
 # ==========================================================
