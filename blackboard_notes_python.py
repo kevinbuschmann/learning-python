@@ -24,6 +24,9 @@ MAP OF THIS FILE:
 # ==========================================================
 
 # Variables are set with the  =  sign:
+from unittest import result
+
+
 lunch_today = "chicken"
 
 # print() shows a result on screen. Pass it a string or a variable.
@@ -338,20 +341,22 @@ print(total)              # 95
 # ==========================================================
 
 # A function = give it stuff IN, it does a job, it hands stuff BACK OUT.
-def add(a, b):
-    return a + b
 
-print(add(3, 5))     # 8
+# to define a function, use  def  and give it a name:
+def function():
+    # do something
+    return result
+# In other cases we can use parameters to give the function input values:
+def function_with_parameters(param1, param2):
+    # do something with param1 and param2
+    return result   
+# a parameter is a variable that the function can use inside its code. When you call the function, you provide arguments for those parameters.
+# but you need to essentially state what the paraemeters are when you call the function, like this:
+param1 = "value1"
+param2 = "value2"
+result = function_with_parameters(param1, param2)
+# 
 
-# def add(a, b):    -> "make a machine called add, that takes 2 things (a, b)"
-# return a + b      -> "the job: add them, hand back the answer"
-# add(3, 5)         -> "run the machine on these two numbers"
-
-# WHY: instead of copy-pasting the same code everywhere, write it ONCE,
-# then just CALL it whenever you need it:
-print(add(10, 2))    # 12
-print(add(100, 1))   # 101
-# same 3-line machine, reused 3 times
 
 
 
